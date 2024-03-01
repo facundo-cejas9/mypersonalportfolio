@@ -45,12 +45,12 @@
       </ul>
     </nav>
 
-    <div class="block  lg:hidden hamburguer">
-      <div class="block lg:hidden bar"></div>
+    <div class=" hamburguer">
+      <div class="bar"></div>
     </div>
   </div>
 
-  <nav class="mobile block lg:hidden mt-[6rem]  bg-gray-900">
+  <nav class="mobile bg-gray-900">
     <ul class="p-4 mt-20  transitio ease-in-out duration-300 mr-20">
       <li>
         <a
@@ -91,7 +91,6 @@
     width: 35px;
     height: 35px;
     cursor: pointer;
-
     appearance: none;
     background: none;
     outline: none;
@@ -100,7 +99,7 @@
 
 .hamburguer .bar, .hamburguer:after, .hamburguer:before  {
     content: '';
-
+    display: block;
     width: 100%;
     height: 5px;
     background-color: white;
@@ -139,6 +138,7 @@
     top: 0;
     left: 100%;
     width: 100%;
+    margin-top: 5rem;
     z-index: 98;
     min-height: 100vh;
     padding-top: 20px;
@@ -151,6 +151,12 @@
 
 .mobile.is-active {
     left: 20%
+}
+
+@media (min-width: 1024px) {
+    .hamburguer {
+        display: none;
+    }
 }
 
 /* Animación para el efecto de máquina de escribir */
